@@ -173,6 +173,29 @@ html, body {
 
 }
 
+.footer {
+
+    height: 50px;
+
+    &__box {
+        height: 100%;
+        width: 300px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    &__copy {
+        font-size: 16px;
+    }
+
+    &__social {
+    }
+
+    &__link {
+    }
+}
+
 .modal {
 
     position: absolute;
@@ -216,6 +239,11 @@ html, body {
         right: 20px;
         z-index: 7;
         cursor: pointer;
+
+        @media (max-width: 440px) {
+            top: 15px;
+            right: 10px;
+        }
 
         &::before,
         &::after {
@@ -293,6 +321,38 @@ html, body {
             line-height: 120%;
             margin-bottom: 15px;
             padding: 0 10px;
+        }
+    }
+
+    &__footer {
+        width: 100%;
+        padding: 0 50px;
+        color: $secondary-color;
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 440px) {
+            font-size: 14px;
+        }
+
+        &-copy {
+        }
+
+        &-link {
+            color: $secondary-color;
+            transition: 0.3s;
+            &:hover {
+                color: $primary-color;
+            }
+        }
+
+        &-gh {
+            font-size: 30px;
+            @media (max-width: 440px) {
+                font-size: 24px;
+            }
         }
     }
 }

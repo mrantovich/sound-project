@@ -247,6 +247,22 @@ html, body {
   grid-row: 2 / 3;
 }
 
+.footer {
+  height: 50px;
+}
+
+.footer__box {
+  height: 100%;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.footer__copy {
+  font-size: 16px;
+}
+
 .modal {
   position: absolute;
   top: calc(50% - 200px);
@@ -292,6 +308,13 @@ html, body {
   right: 20px;
   z-index: 7;
   cursor: pointer;
+}
+
+@media (max-width: 440px) {
+  .modal__close {
+    top: 15px;
+    right: 10px;
+  }
 }
 
 .modal__close::before, .modal__close::after {
@@ -367,6 +390,41 @@ html, body {
     line-height: 120%;
     margin-bottom: 15px;
     padding: 0 10px;
+  }
+}
+
+.modal__footer {
+  width: 100%;
+  padding: 0 50px;
+  color: #a29bfe;
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 440px) {
+  .modal__footer {
+    font-size: 14px;
+  }
+}
+
+.modal__footer-link {
+  color: #a29bfe;
+  transition: 0.3s;
+}
+
+.modal__footer-link:hover {
+  color: #6c5ce7;
+}
+
+.modal__footer-gh {
+  font-size: 30px;
+}
+
+@media (max-width: 440px) {
+  .modal__footer-gh {
+    font-size: 24px;
   }
 }
 
