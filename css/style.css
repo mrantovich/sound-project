@@ -96,7 +96,7 @@ html, body {
 
 @media (max-width: 767px) {
   .header {
-    height: 100px;
+    height: 120px;
   }
 }
 
@@ -167,7 +167,7 @@ html, body {
 
 @media (max-width: 1200px) {
   .main {
-    padding: 30px 20px;
+    padding: 50px 20px;
   }
 }
 
@@ -182,7 +182,6 @@ html, body {
   .main__box {
     height: auto;
     flex-direction: column;
-    justify-content: space-around;
   }
 }
 
@@ -277,6 +276,12 @@ html, body {
   opacity: 0;
   visibility: hidden;
   z-index: 5;
+}
+
+@media (max-width: 578px) {
+  .modal {
+    transform: scale(1.2);
+  }
 }
 
 @media (max-width: 440px) {
@@ -470,6 +475,7 @@ html, body {
   .button {
     padding: 20px 75px;
     border-radius: 28px;
+    margin-top: 20px;
   }
 }
 
@@ -477,6 +483,7 @@ html, body {
   .button {
     padding: 20px 30px;
     border-radius: 24px;
+    margin-top: 20px;
   }
 }
 

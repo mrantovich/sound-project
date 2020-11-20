@@ -27,7 +27,7 @@ html, body {
     height: 140px;
 
     @media (max-width: 767px) {
-        height: 100px;
+        height: 120px;
     }
 
     &__menu {
@@ -94,7 +94,7 @@ html, body {
     height: 100%;
 
     @media (max-width: 1200px) {
-        padding: 30px 20px;
+        padding: 50px 20px;
     }
 
     &__box {
@@ -106,7 +106,6 @@ html, body {
         @media (max-width: 1200px) {
             height: auto;
             flex-direction: column;
-            justify-content: space-around;
         }
     }
 
@@ -211,6 +210,10 @@ html, body {
     opacity: 0;
     visibility: hidden;
     z-index: 5;
+
+    @media (max-width: 578px) {
+        transform: scale(1.2);
+    }
 
     @media (max-width: 440px) {
         width: 280px;
@@ -396,11 +399,13 @@ html, body {
     @media (max-width: 578px) {
         padding: 20px 75px;
         border-radius: 28px;
+        margin-top: 20px;
     }
 
     @media (max-width: 470px) {
         padding: 20px 30px;
         border-radius: 24px;
+        margin-top: 20px;
     }
 
     &__icon {}
