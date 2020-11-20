@@ -152,13 +152,14 @@ html, body {
   transition: 0.3s;
 }
 
-.header__menu-link:hover {
-  color: #6c5ce7;
-}
-
-.header__menu-link:hover::after {
-  width: 100%;
-  opacity: 1;
+@media (min-width: 992px) {
+  .header__menu-link:hover {
+    color: #6c5ce7;
+  }
+  .header__menu-link:hover::after {
+    width: 100%;
+    opacity: 1;
+  }
 }
 
 .main {
@@ -508,16 +509,27 @@ html, body {
   grid-column: 2 / 3;
 }
 
-.button:hover {
-  color: #dfe6e9;
-  border: 2px solid #6c5ce7;
-  background-color: #6c5ce7;
-  box-shadow: 3px 3px 10px #a29bfe;
-  transform: translateX(-6px) translateY(6px);
+@media (min-width: 992px) {
+  .button:hover {
+    color: #dfe6e9;
+    border: 2px solid #6c5ce7;
+    background-color: #6c5ce7;
+    box-shadow: 3px 3px 10px #a29bfe;
+    transform: translateX(-6px) translateY(6px);
+  }
 }
 
 .button:active {
   transition: 0.2s;
   background-color: #dfe6e9;
   color: #6c5ce7;
+}
+
+@media (max-width: 992px) {
+  .button:active {
+    transition: 0.2s;
+    background-color: #6c5ce7;
+    color: #dfe6e9;
+    box-shadow: 3px 3px 10px #a29bfe;
+  }
 }
