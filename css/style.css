@@ -273,7 +273,7 @@ html, body {
   border-radius: 25px;
   box-shadow: 0 0 40px #a29bfe;
   transition: 0.2s;
-  transform: scale(1.5);
+  transform: scale(0.6);
   opacity: 0;
   visibility: hidden;
   z-index: 5;
@@ -281,7 +281,7 @@ html, body {
 
 @media (max-width: 578px) {
   .modal {
-    transform: scale(1.1);
+    transform: scale(0.6);
   }
 }
 
@@ -291,7 +291,7 @@ html, body {
     height: 280px;
     top: calc(50% - 140px);
     left: calc(50% - 140px);
-    transform: scale(1.1);
+    transform: scale(0.6);
   }
 }
 
@@ -445,6 +445,7 @@ html, body {
   visibility: hidden;
   overflow: hidden;
   z-index: 3;
+  transition: 0.3s;
 }
 
 .cover._active {
