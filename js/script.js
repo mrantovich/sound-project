@@ -4,7 +4,10 @@ let maxint = soundList.length;
 
 soundList.forEach(element => soundArray.push(new Howl({
         src: element,
-        format: 'mp3'
+        format: 'mp3',
+        onplay: function() {
+            requestAnimationFrame(makeStep);
+        },
     })
 ));
 
@@ -12,6 +15,7 @@ soundList.forEach(element => soundArray.push(new Howl({
 const mainUI = document.querySelector('.main__ui-text');
 const buttonRandom = document.querySelector('.button_random');
 const buttonRepeat = document.querySelector('.button_repeat');
+const progress = document.querySelector('.main__ui-progress');
 
 function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -29,7 +33,16 @@ function disableButtons() {
 function enableButtons() {
     buttonRandom.classList.remove('_disabled');
     buttonRepeat.classList.add('_disabled');
-}
+};
+
+function makeStep() {
+    let seek = track.seek() || 0;
+    let progressWidth = (((seek / track.duration()) * 100 ) || 0) + "%";
+    progress.style.width = progressWidth;
+    if (track.playing()) {
+        requestAnimationFrame(makeStep);
+    };
+};
 
 function playNow(norepeat=true) {
     if (norepeat) {
