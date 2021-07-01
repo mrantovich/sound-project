@@ -3,7 +3,9 @@ let soundList = ['../audio/sound-01.mp3', '../audio/sound-02.mp3', '../audio/sou
 let maxint = soundList.length;
 
 soundList.forEach(element => soundArray.push(new Howl({
-        src: element
+        src: element,
+        html5: true,
+        format: ['mp3']
     })
 ));
 
