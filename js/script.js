@@ -4,8 +4,7 @@ let maxint = soundList.length;
 
 soundList.forEach(element => soundArray.push(new Howl({
         src: element,
-        html5: true,
-        format: ['mp3']
+        format: 'mp3'
     })
 ));
 
