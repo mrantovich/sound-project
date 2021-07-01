@@ -1,5 +1,5 @@
 let soundArray = [];
-let soundList = ['../audio/sound-01.mp3', '../audio/sound-02.mp3', '../audio/sound-03.mp3'];
+let soundList = ['https://mrantovich.github.io/sound-project/audio/sound-01.mp3', 'https://mrantovich.github.io/sound-project/audio/sound-02.mp3', 'https://mrantovich.github.io/sound-project/audio/sound-03.mp3'];
 let maxint = soundList.length;
 
 soundList.forEach(element => soundArray.push(new Howl({
@@ -19,13 +19,13 @@ function getRandomInt(max) {
 
 let num = getRandomInt(maxint);
 let track = soundArray[num];
-let curTrackName = soundList[num].split('/')[2];
+let curTrackName = soundList[num].split('/')[5];
 
 function playNow(norepeat=true) {
     if (norepeat) {
         num = getRandomInt(maxint);
         track = soundArray[num];
-        curTrackName = soundList[num].split('/')[2];
+        curTrackName = soundList[num].split('/')[5];
 
         Howler.stop();
         track.play();
