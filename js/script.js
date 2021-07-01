@@ -21,6 +21,16 @@ let num = getRandomInt(maxint);
 let track = soundArray[num];
 let curTrackName = soundList[num].split('/')[5];
 
+function disableButtons() {
+    buttonRandom.classList.add('_disabled');
+    buttonRepeat.classList.remove('_disabled');
+};
+
+function enableButtons() {
+    buttonRandom.classList.remove('_disabled');
+    buttonRepeat.classList.add('_disabled');
+}
+
 function playNow(norepeat=true) {
     if (norepeat) {
         num = getRandomInt(maxint);
@@ -34,7 +44,10 @@ function playNow(norepeat=true) {
     else {
         track.stop();
         track.play();
-    }
+    };
+
+    track.on('play', disableButtons);
+    track.on('end', enableButtons);
 
     
     mainUI.animate([

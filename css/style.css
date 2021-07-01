@@ -499,6 +499,12 @@ html, body {
   transition: 0.4s;
 }
 
+.button._disabled {
+  color: rgba(108, 92, 231, 0.4);
+  border: 2px solid rgba(108, 92, 231, 0.4);
+  pointer-events: none;
+}
+
 @media (max-width: 1200px) {
   .button {
     max-width: 800px;

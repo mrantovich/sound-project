@@ -424,6 +424,12 @@ html, body {
     cursor: pointer;
     transition: 0.4s;
 
+    &._disabled {
+        color: rgba($primary-color, 0.4);
+        border: 2px solid rgba($primary-color, 0.4);
+        pointer-events: none;
+    }
+
     @media (max-width: 1200px) {
         max-width: 800px;
         margin-top: 40px;
